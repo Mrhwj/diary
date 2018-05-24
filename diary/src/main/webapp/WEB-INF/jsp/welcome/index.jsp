@@ -5,11 +5,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>我的日记管理</title>
-<script type="text/javascript" src="../bootstrap/jquery/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../bootstrap/jquery/jquery-ui.min.css">
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <link href="../css/signin.css" rel="stylesheet">
+<script type="text/javascript">
+$(function(){
+	$("#submit").bind('click',
+			function(){
+		var address = $("#inputEmail").val();
+		var password = $("#inputPassword").val();
+		$.post("login.do",{address:address,password:password},function(data){
+			if(data.Success==1){
+				window.location.href = "mainView.do?userName="+data.Message;
+			}else{
+				alert("登入失败");
+			}
+		});
+	});
+});
+</script>
 </head>
 <body>
 
@@ -18,7 +34,7 @@
       <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
@@ -26,7 +42,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" id="submit">Sign in</button>
       </form>
 
     </div> <!-- /container -->
