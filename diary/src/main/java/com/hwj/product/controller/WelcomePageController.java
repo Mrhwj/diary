@@ -94,7 +94,7 @@ public class WelcomePageController {
 			dm.setTitle(title);
 			dm.setDescribe(describe);
 			dm.setUser(userName);
-			int stat = welcomePageService.AppendData(dm, filePath);
+			int stat = welcomePageService.AppendData(dm, excelPath);
 			ResponseModel<Object> rm = null;
 			if(stat==1){
 				rm = new ResponseModel<Object>(1,"±£´æ³É¹¦");
