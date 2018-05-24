@@ -29,7 +29,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Write</a></li>
+            <li><a href="writeView.do?userName=${userName }">Write</a></li>
             <li><a href="#contact">Read</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
@@ -61,16 +61,16 @@
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
+            <a href="#" target="_blank" class="list-group-item">Link</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->

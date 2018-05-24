@@ -2,6 +2,7 @@ package com.hwj.product.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -60,5 +61,50 @@ public class WelcomePageController {
 		mv.addObject("list",list);
 		mv.addObject("time",time);
 		return mv;
+	}
+	
+	@RequestMapping(value="writeView",method=RequestMethod.GET)
+	public ModelAndView Write_Page(){
+		String userName = request.getParameter("userName");
+		ModelAndView mv = new ModelAndView("mainPage/writePage");
+		mv.addObject("userName",userName);
+		return mv;
+	}
+	
+	@RequestMapping(value="saveDiary",method=RequestMethod.POST)
+	public @ResponseBody ResponseModel<Object> SaveDiary(){
+		String excelPath = request.getRealPath("")+"/ExcelTable/diaryList.xls";
+		try {
+			String userName = request.getParameter("userName");
+			String title = request.getParameter("title");
+			String describe = request.getParameter("describe");
+			String memo = request.getParameter("memo");
+
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
+			String filePath = request.getRealPath("/diaryFile/"+userName+"/");
+			Calendar c = Calendar.getInstance();
+			Date date = new Date();
+			c.setTime(date);
+			filePath += c.get(Calendar.YEAR) + "/" + (c.get(Calendar.MONTH)+1)+"/";
+			filePath += sdf.format(new Date()) + ".txt";
+			welcomePageService.WriteToTxt(filePath, memo,title);
+			DiaryMessage dm = new DiaryMessage();
+			dm.setCreateDate(new SimpleDateFormat("yyyy-MM-dd").format(date));
+			dm.setPath(filePath);
+			dm.setTitle(title);
+			dm.setDescribe(describe);
+			dm.setUser(userName);
+			int stat = welcomePageService.AppendData(dm, filePath);
+			ResponseModel<Object> rm = null;
+			if(stat==1){
+				rm = new ResponseModel<Object>(1,"保存成功");
+			}else{
+				rm = new ResponseModel<Object>(0,"保存失败");
+			}
+			return rm;
+		} catch (Exception e) {
+			ResponseModel<Object> rm = new ResponseModel<Object>(1,"保存失败");
+			return rm;
+		}
 	}
 }
