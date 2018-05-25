@@ -93,7 +93,6 @@ public class WelcomePageService extends BaseService{
 	public int AppendData(DiaryMessage dm,String filePath) {
 		try {  
 			InputStream is = new FileInputStream(filePath);
-			System.out.println(filePath);
 			Workbook wb = getWorkbook(is,"diaryList.xls");
 			Sheet sheet = wb.getSheetAt(0);  //获取到工作表，因为一个excel可能有多个工作表  
 			Row row=sheet.getRow(0);  //获取第一行（excel中的行默认从0开始，所以这就是为什么，一个excel必须有字段列头），即，字段列头，便于赋值  

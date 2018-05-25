@@ -1,5 +1,6 @@
 package com.hwj.product.controller;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -105,6 +106,19 @@ public class WelcomePageController {
 		} catch (Exception e) {
 			ResponseModel<Object> rm = new ResponseModel<Object>(1,"±£¥Ê ß∞‹");
 			return rm;
+		}
+	}
+	
+	@RequestMapping(value="openText",method=RequestMethod.GET)
+	public void openTxt(){
+		String path = request.getParameter("path");
+		String str = "cmd.exe  /c notepad "+path;
+		try {
+			Process process = Runtime.getRuntime().exec(str);
+			process.waitFor();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

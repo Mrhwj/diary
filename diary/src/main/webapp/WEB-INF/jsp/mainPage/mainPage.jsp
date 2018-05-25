@@ -13,6 +13,9 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/offcanvas.js"></script>
+<script type="text/javascript">
+
+</script>
 </head>
 <body>
     <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -53,7 +56,7 @@
             	<div class="col-xs-6 col-lg-4">
               		<h2>${dm.title }</h2>
               		<p>${dm.describe }</p>
-              		<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+              		<p><a class="btn btn-default" href="openText.do?path=${dm.path }" target="_blank" role="button">View details &raquo;</a></p>
             	</div>
             </c:forEach>
           </div><!--/row-->
