@@ -18,7 +18,7 @@ $(function(){
 		var password = $("#inputPassword").val();
 		$.post("login.do",{address:address,password:password},function(data){
 			if(data.Success==1){
-				window.location.href = "mainView.do?userName="+data.Message;
+				window.location.href = "broadView.do?userName="+data.Message;
 			}else{
 				alert("登入失败");
 			}
