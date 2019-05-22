@@ -19,14 +19,28 @@
 <script src="../bootstrap/assets/js/vendor/holder.min.js"></script>
 <script src="../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script type="text/javascript">
-
+	
 </script>
 </head>
 <body>
 	<h2 class="sub-header">公告列表</h2>
 	<ul class="nav nav-pills">
-		<li role="presentation" class="active"><a href="#"
-			data-toggle="modal" data-target="#AddArticle">新建</a></li>
+		<li role="presentation" class="active">
+			<table>
+				<tr>
+					<td><a href="#" data-toggle="modal" data-target="#AddArticle">新建</a></td>
+					<td><div class="col-lg-6">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="标题">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">搜索</button>
+								</span>
+							</div>
+							<!-- /input-group -->
+						</div></td>
+				</tr>
+			</table>
+		</li>
 	</ul>
 	<div class="table-responsive">
 		<table class="table table-striped">
@@ -123,6 +137,22 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label for="inputTitle" class="col-sm-2 control-label">图片:</label>
+								<div class="col-sm-10">
+									<input type="file" id="" name="" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputTitle" class="col-sm-2 control-label">审批部门:</label>
+								<div class="col-sm-10">
+									<select class="form-control">
+										<option>技术1部</option>
+										<option>技术2部</option>
+										<option>技术3部</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
 								<label for="inputDescribe" class="col-sm-2 control-label">创建时间:</label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control" id="inputDescribe">
@@ -134,7 +164,12 @@
 									<textarea class="form-control" id="memo" rows="15"></textarea>
 								</div>
 							</div>
-							
+							<div class="form-group">
+								<label for="inputMemo" class="col-sm-2 control-label">推送:</label>
+								<div class="col-sm-10">
+									<input type="checkbox" id="blankCheckbox" value="option1">推送信箱
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>

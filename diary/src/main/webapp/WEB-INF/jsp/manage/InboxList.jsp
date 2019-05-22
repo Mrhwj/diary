@@ -78,6 +78,12 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label for="inputTitle" class="col-sm-2 control-label">发送对象:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputTitle">
+								</div>
+							</div>
+							<div class="form-group">
 								<label for="inputMemo" class="col-sm-2 control-label">内容:</label>
 								<div class="col-sm-10">
 									<textarea class="form-control" id="memo" rows="15"></textarea>
