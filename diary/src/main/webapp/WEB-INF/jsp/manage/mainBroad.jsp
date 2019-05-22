@@ -69,7 +69,7 @@
 		<div class="row">
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
-					<li class="active"><a>通知公告<span class="sr-only">(current)</span></a></li>
+					<li><a href="javascript:reflash('MemoView.do')">通知公告<span class="sr-only">(current)</span></a></li>
 					<li><a href="javascript:reflash('articleList.do')">发布</a></li>
 					<li><a href="javascript:reflash('articleList.do')">收取</a></li>
 				</ul>
@@ -82,7 +82,6 @@
 					</a></li>
 				</ul>
 				<ul class="nav nav-sidebar">
-					<li><a>日常管理</a></li>
 					<li><a href="javascript:reflash('dataView.do')">行程记录</a></li>
 					<li><a href="javascript:reflash('inBoxList.do')">日志</a></li>
 				</ul>

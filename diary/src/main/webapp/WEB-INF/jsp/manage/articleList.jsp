@@ -23,7 +23,7 @@
 </script>
 </head>
 <body>
-	<h2 class="sub-header">公告列表</h2>
+	<h2 class="sub-header">列表</h2>
 	<ul class="nav nav-pills">
 		<li role="presentation" class="active">
 			<table>
@@ -143,6 +143,15 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label for="inputTitle" class="col-sm-2 control-label">处理类型:</label>
+								<div class="col-sm-10">
+									<select class="form-control">
+										<option>查看类</option>
+										<option>办理类</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
 								<label for="inputTitle" class="col-sm-2 control-label">审批部门:</label>
 								<div class="col-sm-10">
 									<select class="form-control">
@@ -162,12 +171,6 @@
 								<label for="inputMemo" class="col-sm-2 control-label">内容:</label>
 								<div class="col-sm-10">
 									<textarea class="form-control" id="memo" rows="15"></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputMemo" class="col-sm-2 control-label">推送:</label>
-								<div class="col-sm-10">
-									<input type="checkbox" id="blankCheckbox" value="option1">推送信箱
 								</div>
 							</div>
 						</form>

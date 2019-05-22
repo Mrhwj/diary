@@ -37,4 +37,9 @@ public class ManageBroadController {
 		ModelAndView mv = new ModelAndView("manage/dateper");
 		return mv;
 	}
+	@RequestMapping(value="MemoView",method=RequestMethod.GET)
+	public ModelAndView MemoView(){
+		ModelAndView mv = new ModelAndView("manage/memoList");
+		return mv;
+	}
 }
