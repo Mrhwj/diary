@@ -23,12 +23,14 @@
 <script src="../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="../js/tooltip-viewport.js"></script>
 <script type="text/javascript">
+function(){
+	$('[data-toggle="popover"]').popover();
+	$('.dropdown-toggle').dropdown()
+}
+
 	function reflash(src) {
 		var str = "<div class=\"embed-responsive embed-responsive-4by3\"><iframe class=\"embed-responsive-item\" src=\""+src+"\"></iframe></div>";
 		$("#mainDiv").html("").html(str);
-
-		$('[data-toggle="popover"]').popover();
-		$('.dropdown-toggle').dropdown()
 	}
 </script>
 </head>
@@ -83,7 +85,7 @@
 				</ul>
 				<ul class="nav nav-sidebar">
 					<li><a href="javascript:reflash('dataView.do')">行程记录</a></li>
-					<li><a href="javascript:reflash('inBoxList.do')">日志</a></li>
+					<li><a href="javascript:reflash('dayView.do')">日志</a></li>
 				</ul>
 			</div>
 			<div id="mainDiv"

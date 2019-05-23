@@ -42,4 +42,9 @@ public class ManageBroadController {
 		ModelAndView mv = new ModelAndView("manage/memoList");
 		return mv;
 	}
+	@RequestMapping(value="dayView",method=RequestMethod.GET)
+	public ModelAndView DayView(){
+		ModelAndView mv = new ModelAndView("manage/dayList");
+		return mv;
+	}
 }

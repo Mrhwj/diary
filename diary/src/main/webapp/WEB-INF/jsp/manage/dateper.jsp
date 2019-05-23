@@ -82,7 +82,7 @@
 						style="color: black" title="4月30日">30</a></td>
 					<td class="cal_day" valign="middle"
 						style="color: black;  border-color: Silver; font-size: 10pt; width: 14%;"><a
-						href="javascript:__doPostBack('ctl00$cphMain$Calendar1','6695')"
+						href="javascript:__doPostBack('ctl00$cphMain$Calendar1','6695')" data-toggle="modal" data-target="#Send"
 						style="color: black" title="今天嘉兴会议">1</a></td>
 					<td class="cal_day" valign="middle"
 						style="color: black;  border-color: Silver; font-size: 10pt; width: 14%;"><a
@@ -264,7 +264,53 @@
 			</tbody>
 
 		</table>
+		
+	</div>
+	<div class="modal fade" id="Send" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">添加</h4>
+				</div>
+				<div class="modal-body">
+					<div class="jumbotron">
+						<form class="form-horizontal">
+							<input type="hidden" id="userName" value="">
+							<div class="form-group">
+								<label for="inputTitle" class="col-sm-2 control-label">人员:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputTitle"
+										placeholder="">
+								</div>
+							</div>
 
+							<div class="form-group">
+								<label for="inputTitle" class="col-sm-2 control-label">时间:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputTitle">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputMemo" class="col-sm-2 control-label">内容:</label>
+								<div class="col-sm-10">
+									<textarea class="form-control" id="memo" rows="15"></textarea>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

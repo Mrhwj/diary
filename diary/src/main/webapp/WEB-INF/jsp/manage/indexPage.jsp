@@ -24,7 +24,7 @@ $(function () {
 </script>
 </head>
 <body>
-    <h1 class="page-header">Dashboard</h1>
+    <h1 class="page-header">待办事项</h1>
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -48,7 +48,7 @@ $(function () {
             </div>
           </div>
 
-          <h2 class="sub-header">Section title</h2>
+          <h2 class="sub-header">公告列表</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>

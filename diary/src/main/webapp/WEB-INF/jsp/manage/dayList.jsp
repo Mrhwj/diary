@@ -23,32 +23,40 @@
 </script>
 </head>
 <body>
-	<h2 class="sub-header">收件箱</h2>
+	<h2 class="sub-header">日志</h2>
 	<ul class="nav nav-pills">
-		<li role="presentation" class="active"><a href="#"
-			data-toggle="modal" data-target="#Send">发送</a></li>
+		<li role="presentation" class="active">
+		<table>
+			<tr>
+				<td><a href="#" data-toggle="modal" data-target="#Send">添加</a></td>
+				<td>&nbsp|&nbsp</td>
+				<td><a href="#"data-toggle="modal" data-target="">查看所有日志</a></td>
+			</tr>
+		</table>
+
+		</li>
 	</ul>
 	<div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>序号</th>
-					<th>标题</th>
-					<th>发送人</th>
+					<th>人员</th>
+					<th>内容</th>
 					<th>时间</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>1</td>
-					<td>下午开会请准备好</td>
 					<td>ipsum</td>
+					<td>下午开会请准备好</td>
 					<td>2019/3/18</td>
 				</tr>
 				<tr>
-					<td>1</td>
-					<td>下周末开会</td>
+					<td>2</td>
 					<td>ipsum</td>
+					<td>下周末开会</td>
 					<td>2019/3/18</td>
 				</tr>
 			</tbody>
@@ -64,27 +72,22 @@
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">发送信息</h4>
+					<h4 class="modal-title" id="myModalLabel">添加</h4>
 				</div>
 				<div class="modal-body">
 					<div class="jumbotron">
 						<form class="form-horizontal">
 							<input type="hidden" id="userName" value="">
 							<div class="form-group">
-								<label for="inputTitle" class="col-sm-2 control-label">标题:</label>
+								<label for="inputTitle" class="col-sm-2 control-label">人员:</label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control" id="inputTitle"
-										placeholder="Title">
+										placeholder="">
 								</div>
 							</div>
+
 							<div class="form-group">
-								<label for="inputTitle" class="col-sm-2 control-label">附件:</label>
-								<div class="col-sm-10">
-									<input type="file" id="" name="" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputTitle" class="col-sm-2 control-label">发送对象:</label>
+								<label for="inputTitle" class="col-sm-2 control-label">时间:</label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control" id="inputTitle">
 								</div>
@@ -101,7 +104,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-					<button type="button" class="btn btn-primary">发送</button>
+					<button type="button" class="btn btn-primary">保存</button>
 				</div>
 			</div>
 		</div>
